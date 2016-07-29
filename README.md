@@ -1,6 +1,12 @@
 # brotli plugin for webpack
 
-This plugin compresses assets with [Brotli](https://github.com/google/brotli) compression algorithm using [iltorb](https://github.com/MayhemYDG/iltorb#brotliparams) library for serving it with [ngx_brotli](https://github.com/google/ngx_brotli) or such. 
+This plugin compresses assets with [Brotli](https://github.com/google/brotli) compression algorithm using [iltorb](https://github.com/MayhemYDG/iltorb#brotliparams) library for serving it with [ngx_brotli](https://github.com/google/ngx_brotli) or such.
+ 
+## Installation
+
+```
+npm install --save brotli-webpack-plugin
+```
 
 ## Usage
 
