@@ -1,0 +1,21 @@
+{
+  "name": "brotli-webpack-plugin",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ilia Saulenko",
+    "email": "hi@mynameiswhm.ru",
+    "url": "https://github.com/mynameiswhm"
+  },
+  "description": "Prepare Brotli-compressed versions of assets to serve them with Content-Encoding: br",
+  "dependencies": {
+    "async": "0.2.x",
+    "iltorb": "^1.0.12",
+    "webpack-sources": "^0.1.0"
+  },
+  "homepage": "https://github.com/ngsru/brotli-webpack-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngsru/brotli-webpack-plugin.git"
+  },
+  "license": "MIT"
+}
