@@ -5,7 +5,7 @@ var RawSource = require('webpack-sources/lib/RawSource');
 
 function CompressionPlugin(options) {
     options = options || {};
-    this.asset = options.asset || '[path].gz[query]';
+    this.asset = options.asset || '[path].br[query]';
     this.test = options.test || options.regExp;
     this.threshold = options.threshold || 0;
     this.minRatio = options.minRatio || 0.8;
