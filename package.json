@@ -1,6 +1,6 @@
 {
   "name": "brotli-webpack-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Ilia Saulenko",
     "email": "hi@mynameiswhm.ru",
@@ -12,10 +12,10 @@
     "iltorb": "^1.0.12",
     "webpack-sources": "^0.1.0"
   },
-  "homepage": "https://github.com/ngsru/brotli-webpack-plugin",
+  "homepage": "https://github.com/mynameiswhm/brotli-webpack-plugin",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ngsru/brotli-webpack-plugin.git"
+    "url": "https://github.com/mynameiswhm/brotli-webpack-plugin.git"
   },
   "license": "MIT"
 }
