@@ -1,7 +1,7 @@
 # brotli plugin for webpack
 
 This plugin compresses assets with [Brotli](https://github.com/google/brotli) compression algorithm using [iltorb](https://github.com/MayhemYDG/iltorb#brotliparams) library for serving it with [ngx_brotli](https://github.com/google/ngx_brotli) or such.
- 
+
 ## Installation
 
 ```
@@ -26,7 +26,12 @@ module.exports = {
 
 Arguments:
 
-* `asset`: The target asset name. `[file]` is replaced with the original asset file name. `[path]` is replaced with the path of the original asset and `[query]` with the query. Defaults to `'[path].br[query]'`.
+* `asset`: The target asset name. Defaults to `'[path].br[query]'`.
+  * `[file]` is replaced with the original asset file name.
+  * `[fileWithoutExt]` is replaced with the file name minus its extension, e.g. the `style` of `style.css`.
+  * `[ext]` is replaced with the file name extension, e.g. the `css` of `style.css`.
+  * `[path]` is replaced with the path of the original asset.
+  * `[query]` is replaced with the query.
 * `test`: All assets matching this RegExp are processed. Defaults to every asset.
 * `threshold`: Only assets bigger than this size (in bytes) are processed. Defaults to `0`.
 * `minRatio`: Only assets that compress better that this ratio are processed. Defaults to `0.8`.
