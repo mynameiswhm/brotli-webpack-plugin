@@ -64,11 +64,13 @@ CompressionPlugin.prototype.apply = function (compiler) {
                     var parse = url.parse(file);
                     var sub = {
                         file: file,
+                        fileWithoutExt: file.split('.').slice(0, -1).join('.'),
+                        ext: file.split('.').slice(-1).join(''),
                         path: parse.pathname,
                         query: parse.query || ''
                     };
 
-                    var newFile = this.asset.replace(/\[(file|path|query)\]/g, function (p0, p1) {
+                    var newFile = this.asset.replace(/\[(file|fileWithoutExt|ext|path|query)]/g, function (p0, p1) {
                         return sub[p1];
                     });
 
