@@ -10,11 +10,7 @@ function CompressionPlugin(options) {
     this.threshold = options.threshold || 0;
     this.minRatio = options.minRatio || 0.8;
 
-    try {
-        var brotli = require('iltorb');
-    } catch (err) {
-        throw new Error('iltorb not found');
-    }
+    var compress = require('./compress.js')();
 
     var brotliOptions = {
         mode: options.hasOwnProperty('mode') ? options.mode : 0,
@@ -28,7 +24,7 @@ function CompressionPlugin(options) {
     };
 
     this.compress = function (content, callback) {
-        brotli.compress(content, brotliOptions, callback);
+        compress(content, brotliOptions, callback);
     };
 }
 module.exports = CompressionPlugin;
