@@ -5,7 +5,7 @@ This plugin compresses assets with [Brotli](https://github.com/google/brotli) co
 ## Installation
 
 ```
-npm install --save brotli-webpack-plugin
+npm install --save-dev brotli-webpack-plugin
 ```
 
 ## Usage
