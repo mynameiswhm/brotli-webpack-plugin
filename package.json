@@ -1,6 +1,6 @@
 {
   "name": "brotli-webpack-plugin",
-  "version": "0.3.0-beta.0",
+  "version": "0.3.0",
   "author": {
     "name": "Ilia Saulenko",
     "email": "hi@mynameiswhm.ru",
