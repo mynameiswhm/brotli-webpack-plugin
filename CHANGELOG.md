@@ -1,0 +1,13 @@
+# Change Log
+
+### 0.4.0
+Moved compilation from `this-compilation` to `emit` stage. See [issue #179](https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/179) of [extract-text-webpack-plugin](https://github.com/webpack-contrib/extract-text-webpack) for details.
+
+### 0.3.0
+Optional [brotli.js](https://github.com/devongovett/brotli.js) fallback when [iltorb](https://github.com/MayhemYDG/iltorb) is not available/couldn't be compiled.
+
+### 0.2.0
+Added support for `[fileWithoutExt]` and `[ext]` placeholders. This allows a mapping from e.g. 'style.css' to 'style.br.css', aiding use with tools that infer Content-Type from extension.
+
+### 0.1.0
+Initial release
