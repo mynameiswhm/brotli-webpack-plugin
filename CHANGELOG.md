@@ -1,5 +1,8 @@
 # Change Log
 
+### 0.4.1
+Added warning message when `iltorb` is not available.
+
 ### 0.4.0
 Moved compilation from `this-compilation` to `emit` stage. See [issue #179](https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/179) of [extract-text-webpack-plugin](https://github.com/webpack-contrib/extract-text-webpack) for details.
 
