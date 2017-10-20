@@ -1,6 +1,6 @@
 # brotli plugin for webpack
 
-This plugin compresses assets with [Brotli](https://github.com/google/brotli) compression algorithm using [iltorb](https://github.com/MayhemYDG/iltorb#brotliparams) library for serving it with [ngx_brotli](https://github.com/google/ngx_brotli) or such.
+This plugin compresses assets with [Brotli](https://github.com/google/brotli) compression algorithm using [iltorb](https://github.com/MayhemYDG/iltorb#brotliencodeparams) library for serving it with [ngx_brotli](https://github.com/google/ngx_brotli) or such.
 
 ## Installation
 
@@ -36,15 +36,13 @@ Arguments:
 * `threshold`: Only assets bigger than this size (in bytes) are processed. Defaults to `0`.
 * `minRatio`: Only assets that compress better that this ratio are processed. Defaults to `0.8`.
 
-Optional arguments for Brotli (see [iltorb](https://github.com/MayhemYDG/iltorb#brotliparams) doc for details):
+Optional arguments for Brotli (see [iltorb](https://github.com/MayhemYDG/iltorb#brotliencodeparams) doc for details):
 * `mode`: Default: 0,
 * `quality`: Default: 11,
 * `lgwin`: Default: 22,
 * `lgblock`: Default: 0,
-* `enable_dictionary`: Default: true,
-* `enable_transforms`: Default: false,
-* `greedy_block_split`: Default: false,
-* `enable_context_modeling`: Default: false
+* `size_hint`: Default: 0,
+* `disable_literal_context_modeling`: Default: false
 
 ## License
 
