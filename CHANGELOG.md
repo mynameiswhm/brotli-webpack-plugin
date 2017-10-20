@@ -1,5 +1,8 @@
 # Change Log
 
+### 0.4.2
+Updated [iltorb](https://github.com/MayhemYDG/iltorb) to 2.0.1.
+
 ### 0.4.1
 Added warning message when `iltorb` is not available.
 
