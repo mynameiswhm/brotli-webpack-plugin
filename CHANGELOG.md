@@ -1,5 +1,8 @@
 # Change Log
 
+### 0.4.3
+Updated `iltorb`s  available configuration parameters in documentation.
+
 ### 0.4.2
 Updated [iltorb](https://github.com/MayhemYDG/iltorb) to 2.0.1.
 
