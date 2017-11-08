@@ -9,6 +9,7 @@ function CompressionPlugin(options) {
     this.test = options.test || options.regExp;
     this.threshold = options.threshold || 0;
     this.minRatio = options.minRatio || 0.8;
+    this.deleteOriginalAssets = options.deleteOriginalAssets || false;
 
     var compress = require('./compress.js')();
 
@@ -70,7 +71,9 @@ CompressionPlugin.prototype.apply = function (compiler) {
                 var newFile = this.asset.replace(/\[(file|fileWithoutExt|ext|path|query)]/g, function (p0, p1) {
                     return sub[p1];
                 });
-
+                if (this.deleteOriginalAssets) {
+                  delete assets[file];
+                }
                 assets[newFile] = new RawSource(result);
                 callback();
             }.bind(this));
