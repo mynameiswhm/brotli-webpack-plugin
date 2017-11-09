@@ -36,6 +36,7 @@ addons:
     - g++-4.8
 before_install:
   - 'if [[ `npm -v` != 5* ]]; then npm i -g npm@^5.0.0; fi'
+  - npm install -g greenkeeper-lockfile@1
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then export CXX=g++-4.8; fi
   - export CXX=g++
   - export CC=gcc
@@ -47,5 +48,8 @@ before_script:
     if [ "$WEBPACK_VERSION" ]; then
       npm i --no-save webpack@$WEBPACK_VERSION
     fi
+  - greenkeeper-lockfile-update
+after_script:
+  - greenkeeper-lockfile-upload
 script:
   - 'npm run travis:$JOB_PART'
