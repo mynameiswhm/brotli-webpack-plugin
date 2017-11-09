@@ -42,7 +42,8 @@ Optional arguments for Brotli (see [iltorb](https://github.com/MayhemYDG/iltorb#
 * `lgwin`: Default: 22,
 * `lgblock`: Default: 0,
 * `size_hint`: Default: 0,
-* `disable_literal_context_modeling`: Default: false
+* `disable_literal_context_modeling`: Default: false,
+* `deleteOriginalAssets`: remove original files that were compressed with brotli. Default: false
 
 ## License
 
