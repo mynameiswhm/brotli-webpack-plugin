@@ -20,5 +20,14 @@
     "type": "git",
     "url": "https://github.com/mynameiswhm/brotli-webpack-plugin.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.8.1"
+  },
+  "scripts": {
+    "test": "jest",
+    "travis:test": "npm run test -- --runInBand"
+  }
 }

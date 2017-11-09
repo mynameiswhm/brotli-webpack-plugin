@@ -3,7 +3,7 @@ var url = require('url');
 
 var RawSource = require('webpack-sources/lib/RawSource');
 
-function CompressionPlugin(options) {
+function BrotliPlugin(options) {
     options = options || {};
     this.asset = options.asset || '[path].br[query]';
     this.test = options.test || options.regExp;
@@ -27,9 +27,9 @@ function CompressionPlugin(options) {
         compress(content, brotliOptions, callback);
     };
 }
-module.exports = CompressionPlugin;
+module.exports = BrotliPlugin;
 
-CompressionPlugin.prototype.apply = function (compiler) {
+BrotliPlugin.prototype.apply = function (compiler) {
     compiler.plugin('emit', function (compilation, callback) {
         var assets = compilation.assets;
         
