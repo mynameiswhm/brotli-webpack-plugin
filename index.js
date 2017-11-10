@@ -72,7 +72,7 @@ BrotliPlugin.prototype.apply = function (compiler) {
                     return sub[p1];
                 });
                 if (this.deleteOriginalAssets) {
-                  delete assets[file];
+                    delete assets[file];
                 }
                 assets[newFile] = new RawSource(result);
                 callback();

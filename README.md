@@ -47,7 +47,6 @@ Optional arguments for Brotli (see [iltorb](https://github.com/MayhemYDG/iltorb#
 * `size_hint`: Default: 0,
 * `disable_literal_context_modeling`: Default: false
 
-
 ## License
 
 Heavily copy-pasted from [webpack/compression-webpack-plugin](https://github.com/webpack/compression-webpack-plugin) by [Tobias Koppers](https://github.com/sokra).

@@ -1,5 +1,8 @@
 # Change Log
 
+### 0.5.0
+Added `deleteOriginalAssets` option to remove original files that were compressed with brotli.
+
 ### 0.4.3
 Updated `iltorb`s  available configuration parameters in documentation.
 
