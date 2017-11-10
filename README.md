@@ -37,6 +37,7 @@ Arguments:
 * `test`: All assets matching this RegExp are processed. Defaults to every asset.
 * `threshold`: Only assets bigger than this size (in bytes) are processed. Defaults to `0`.
 * `minRatio`: Only assets that compress better that this ratio are processed. Defaults to `0.8`.
+* `deleteOriginalAssets`: remove original files that were compressed with brotli. Default: false
 
 Optional arguments for Brotli (see [iltorb](https://github.com/MayhemYDG/iltorb#brotliencodeparams) doc for details):
 * `mode`: Default: 0,
@@ -44,8 +45,8 @@ Optional arguments for Brotli (see [iltorb](https://github.com/MayhemYDG/iltorb#
 * `lgwin`: Default: 22,
 * `lgblock`: Default: 0,
 * `size_hint`: Default: 0,
-* `disable_literal_context_modeling`: Default: false,
-* `deleteOriginalAssets`: remove original files that were compressed with brotli. Default: false
+* `disable_literal_context_modeling`: Default: false
+
 
 ## License
 
