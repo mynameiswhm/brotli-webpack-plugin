@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`default: main.js 1`] = `
+exports[`when applied with default settings matches snapshot: default: main.js 1`] = `
 "/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -83,7 +83,7 @@ module.exports = function Foo() {
 /******/ ]);"
 `;
 
-exports[`default: main.js.br 1`] = `
+exports[`when applied with default settings matches snapshot: default: main.js.br 1`] = `
 Object {
   "data": Array [
     27,
