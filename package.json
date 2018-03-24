@@ -29,5 +29,8 @@
   "scripts": {
     "test": "jest",
     "travis:test": "npm run test -- --runInBand"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
