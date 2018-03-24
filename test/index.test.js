@@ -55,6 +55,8 @@ describe('when applied with default settings', function () {
 
             for (var file in stats.compilation.assets) {
                 if (Object.prototype.hasOwnProperty.call(stats.compilation.assets, file)) {
+                    console.log(stats.compilation.assets[file].source());
+
                     expect(stats.compilation.assets[file].source()).toMatchSnapshot('default: ' + file);
                 }
             }
