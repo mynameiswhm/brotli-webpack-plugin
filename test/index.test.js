@@ -1,5 +1,6 @@
 var BrotliPlugin = require('../index.js');
 var webpack = require('webpack');
+var iltorb = require('iltorb');
 var rmRf = require('rimraf');
 
 var OUTPUT_DIR = __dirname + '/tmp/';
@@ -53,13 +54,11 @@ describe('when applied with default settings', function () {
             expect(stats.compilation.assets['main.js']);
             expect(stats.compilation.assets['main.js.br']);
 
-            for (var file in stats.compilation.assets) {
-                if (Object.prototype.hasOwnProperty.call(stats.compilation.assets, file)) {
-                    console.log(stats.compilation.assets[file].source());
+            var source = stats.compilation.assets['main.js'].source();
+            expect(source).toContain('console.log');
 
-                    expect(stats.compilation.assets[file].source()).toMatchSnapshot('default: ' + file);
-                }
-            }
+            var unpacked = iltorb.decompressSync(stats.compilation.assets['main.js.br'].source()).toString();
+            expect(unpacked).toMatch(source);
         });
     });
 });
