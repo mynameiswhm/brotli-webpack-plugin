@@ -45,7 +45,7 @@ describe('when applied with default settings', function () {
         rmRf(OUTPUT_DIR, done)
     });
 
-    it('matches snapshot', function () {
+    it('compresses and decopresses', function () {
         var compiler = createCompiler();
 
         new BrotliPlugin().apply(compiler);
@@ -57,8 +57,8 @@ describe('when applied with default settings', function () {
             var source = stats.compilation.assets['main.js'].source();
             expect(source).toContain('console.log');
 
-            var unpacked = iltorb.decompressSync(stats.compilation.assets['main.js.br'].source()).toString();
-            expect(unpacked).toMatch(source);
+            var decopressed = iltorb.decompressSync(stats.compilation.assets['main.js.br'].source()).toString();
+            expect(decopressed).toMatch(source);
         });
     });
 });
