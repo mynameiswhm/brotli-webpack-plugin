@@ -51,8 +51,8 @@ describe('when applied with default settings', function () {
         new BrotliPlugin().apply(compiler);
 
         return compile(compiler).then(function (stats) {
-            expect(stats.compilation.assets['main.js']);
-            expect(stats.compilation.assets['main.js.br']);
+            expect(stats.compilation.assets).toHaveProperty(['main.js']);
+            expect(stats.compilation.assets).toHaveProperty(['main.js.br']);
 
             var source = stats.compilation.assets['main.js'].source();
             expect(source).toContain('console.log');
