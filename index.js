@@ -31,9 +31,9 @@ function BrotliPlugin(options) {
 module.exports = BrotliPlugin;
 
 BrotliPlugin.prototype.apply = function (compiler) {
-    compiler.hooks.emit.tapAsync('BrotliPlugin',  function (compilation, callback) {
+    var emit = function (compilation, callback) {
         var assets = compilation.assets;
-        
+
         async.forEach(Object.keys(assets), function (file, callback) {
             if (this.test && !this.test.test(file)) {
                 return callback();
@@ -78,5 +78,12 @@ BrotliPlugin.prototype.apply = function (compiler) {
                 callback();
             }.bind(this));
         }.bind(this), callback);
-    }.bind(this));
+    }.bind(this);
+
+    if (compiler.hooks) {
+        const plugin = { name: 'BrotliPlugin' };
+        compiler.hooks.emit.tapAsync(plugin, emit);
+    } else {
+        compiler.plugin('emit', emit);
+    }
 };
