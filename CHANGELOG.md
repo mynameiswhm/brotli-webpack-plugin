@@ -1,5 +1,8 @@
 # Change Log
 
+### 1.0.0
+Added native support for Webpack 4 hooks API (to avoid `DeprecationWarning`), along with backwards compatibility for legacy Webpack versions.
+
 ### 0.5.0
 Added `deleteOriginalAssets` option to remove original files that were compressed with brotli.
 
