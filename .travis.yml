@@ -6,28 +6,24 @@ jobs:
   allow_failures:
     - env: WEBPACK_VERSION=canary
   include:
-    - &test
-      stage: Webpack tests
+    - &old
+      stage: Webpack tests (old)
       node_js: 6
       env: WEBPACK_VERSION=latest JOB_PART=test
       script: npm run travis:$JOB_PART
 
-    - <<: *test
+    - <<: *old
       node_js: 8
       env: WEBPACK_VERSION=latest JOB_PART=test
       script: npm run travis:$JOB_PART
 
-    - <<: *test
-      node_js: 9
-      env: WEBPACK_VERSION=latest JOB_PART=test
-      script: npm run travis:$JOB_PART
-
-    - <<: *test
+    - &current
+      stage: Webpack tests (current)
       node_js: 10
       env: WEBPACK_VERSION=latest JOB_PART=test
       script: npm run travis:$JOB_PART
 
-    - <<: *test
+    - <<: *current
       node_js: 10
       env: WEBPACK_VERSION=3 JOB_PART=test
       script: npm run travis:$JOB_PART
