@@ -2,7 +2,7 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/mynameiswhm/brotli-webpack-plugin.svg)](https://greenkeeper.io/)
 
-This plugin compresses assets with [Brotli](https://github.com/google/brotli) compression algorithm using [iltorb](https://github.com/MayhemYDG/iltorb#brotliencodeparams) library for serving it with [ngx_brotli](https://github.com/google/ngx_brotli) or such.
+This plugin compresses assets with [Brotli](https://github.com/google/brotli) compression algorithm using [zlib](https://nodejs.org/api/zlib.html#zlib_zlib_brotlicompress_buffer_options_callback), [iltorb](https://github.com/MayhemYDG/iltorb#brotliencodeparams) or [brotli.js](https://github.com/foliojs/brotli.js) libraries for serving it with [ngx_brotli](https://github.com/google/ngx_brotli) or such.
 
 ## Installation
 

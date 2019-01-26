@@ -1,5 +1,8 @@
 # Change Log
 
+### 1.1.0
+Added native brotli support via [zlib.brotliCompressSync](https://nodejs.org/api/zlib.html#zlib_zlib_brotlicompress_buffer_options_callback) for Node v11.7+.
+
 ### 1.0.0
 Added native support for Webpack 4 hooks API (to avoid `DeprecationWarning`), along with backwards compatibility for legacy Webpack versions.
 

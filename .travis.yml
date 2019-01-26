@@ -8,12 +8,12 @@ jobs:
   include:
     - &current
       stage: Webpack tests (current node)
-      node_js: 10
+      node_js: 11
       env: WEBPACK_VERSION=latest JOB_PART=test
       script: npm run travis:$JOB_PART
 
     - <<: *current
-      node_js: 10
+      node_js: 11
       env: WEBPACK_VERSION=3 JOB_PART=test
       script: npm run travis:$JOB_PART
 
@@ -24,6 +24,11 @@ jobs:
       script: npm run travis:$JOB_PART
 
     - <<: *old
+      node_js: 10
+      env: WEBPACK_VERSION=3 JOB_PART=test
+      script: npm run travis:$JOB_PART
+
+    - <<: *old
       node_js: 8
       env: WEBPACK_VERSION=latest JOB_PART=test
       script: npm run travis:$JOB_PART
@@ -31,7 +36,7 @@ jobs:
     - stage: Webpack tests (canary, current node)
       before_script: npm i --no-save git://github.com/webpack/webpack.git#master
       script: npm run travis:$JOB_PART
-      node_js: 10
+      node_js: 11
       env: WEBPACK_VERSION=canary JOB_PART=test
 addons:
   apt:
