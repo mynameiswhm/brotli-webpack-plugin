@@ -1,8 +1,8 @@
 function adapter() {
     try {
         var zlib = require('zlib');
-        if (zlib.hasOwnProperty('brotliCompressSync')) {
-            return zlib.brotliCompressSync;
+        if (zlib.hasOwnProperty('brotliCompress')) {
+            return zlib.brotliCompress;
         }
     } catch (err) {}
 

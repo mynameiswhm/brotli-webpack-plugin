@@ -42,7 +42,7 @@ BrotliPlugin.prototype.apply = function (compiler) {
             var asset = assets[file];
             var content = asset.source();
             if (!Buffer.isBuffer(content)) {
-                content = new Buffer(content, 'utf-8');
+                content = Buffer.from(content, 'utf-8');
             }
 
             var originalSize = content.length;
