@@ -1,5 +1,8 @@
 # Change Log
 
+### 1.1.1
+Add safe compilation hoks to prevent deprecation warning for frozen compilation assets in Webpack 5, along with backwards compatibility for older Webpack versions.
+
 ### 1.1.0
 Added native brotli support via [zlib.brotliCompressSync](https://nodejs.org/api/zlib.html#zlib_zlib_brotlicompress_buffer_options_callback) for Node v11.7+.
 
