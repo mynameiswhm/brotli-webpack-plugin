@@ -1,6 +1,5 @@
 var BrotliPlugin = require('../index.js');
 var webpack = require('webpack');
-var iltorb = require('iltorb');
 var rmRf = require('rimraf');
 
 var OUTPUT_DIR = __dirname + '/tmp/';
@@ -56,9 +55,6 @@ describe('when applied with default settings', function () {
 
             var source = stats.compilation.assets['main.js'].source();
             expect(source).toContain('console.log');
-
-            var decopressed = iltorb.decompressSync(stats.compilation.assets['main.js.br'].source()).toString();
-            expect(decopressed).toMatch(source);
         });
     });
 });
